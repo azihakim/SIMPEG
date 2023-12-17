@@ -76,5 +76,8 @@ Route::get('/regist-calonkaryawan', function () {
 Route::get('/pengajuan-calonkaryawan', function () {
     return view('dataGaji.tambah');
 });
+Route::get('/login', function () {
+    return view('login');
+});
 
 

@@ -44,21 +44,38 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="" href="#" ></a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    {{-- {{ auth()->user()->name }} - {{ auth()->user()->email }} --}}
-                </li>
-            </ul>
+        <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    {{-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul> --}}
 
-            
-        </nav>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>&nbsp;&nbsp;<strong>Admin</strong>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <div class="dropdown-divider"></div>
+          <a href="{{ url('login') }}" class="dropdown-item">
+            <i class="fas fa-exit mr-2"></i>LogOut
+          </a>
+        </div>
+      </li>
+      
+    </ul>
+  </nav>
+  <!-- /.navbar -->
         <!-- /.navbar -->
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -122,12 +139,12 @@
                                 <p>Promosi</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ url('data-gaji') }}" class="nav-link">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>Data Gaji</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a href="{{ url('recruitment') }}" class="nav-link">
                                 <i class="nav-icon fas fa-user-plus"></i>

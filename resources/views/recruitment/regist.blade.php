@@ -66,13 +66,13 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <a href="{{ url('login') }}" class="btn btn-primary btn-block">Register</a>
           </div>
           <!-- /.col -->
         </div>
       </form>
       <br>
-      <a href="login.html" class="text-center">Sudah terdaftar?</a>
+      <a href="{{ url('login') }}" class="text-center">Sudah terdaftar?</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

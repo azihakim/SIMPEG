@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('login');
 });
 
 Route::get('/dashboard-karyawan', function () {

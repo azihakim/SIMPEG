@@ -5,12 +5,14 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header">
-                {{-- @if (auth()->user()->jabatan == 'Admin') --}}
-                    {{-- <div class="col-sm-2">
-                        <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-karyawan') }}">Tambah</a>
-                    </div> --}}
-                {{-- @endif --}}
-                <h2>Data Absensi</h2>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h2>Absensi</h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-absensi') }}">Tambah Data</a>
+                    </div>
+                </div>
             </div>
             <!-- /.card-header -->
             <div class="card-body">

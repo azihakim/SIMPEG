@@ -5,9 +5,14 @@
         <div class="card">
             <div class="card-header">
                 {{-- @if (auth()->user()->jabatan == 'Admin') --}}
-                    <div class="col-sm-2">
-                        <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-karyawan') }}">Tambah</a>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h2>Recruitment</h2>
                     </div>
+                    <div class="col-sm-2">
+                        <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-phk') }}">Tambah Data</a>
+                    </div>
+                </div>
                 {{-- @endif --}}
             </div>
             <!-- /.card-header -->
@@ -16,10 +21,10 @@
                 <thead>
                     <tr>
                         <th></th>
+                        <th>STATUS</th>
                         <th>CALON KARYAWAN</th>
                         <th>TELEPON</th>
                         <th>ALAMAT</th>
-                        <th>STATUS</th>
                         <th>BERKAS</th>
                         <th>WAKTU SUBMIT</th>
                     </tr>
@@ -44,8 +49,6 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     
                 </tbody>
@@ -53,13 +56,11 @@
                     <tr>
                         <th></th>
                         <th>STATUS</th>
-                        <th>NAMA</th>
-                        <th>USERNAME</th>
+                        <th>CALON KARYAWAN</th>
                         <th>TELEPON</th>
-                        <th>JENIS KELAMIN</th>
-                        <th>AGAMA</th>
                         <th>ALAMAT</th>
-                        <th>NIK</th>
+                        <th>BERKAS</th>
+                        <th>WAKTU SUBMIT</th>
                     </tr>
                 </tfoot>
             </table>

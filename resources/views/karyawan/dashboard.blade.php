@@ -5,9 +5,14 @@
         <div class="card">
             <div class="card-header">
                 {{-- @if (auth()->user()->jabatan == 'Admin') --}}
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h2>Karyawan</h2>
+                    </div>
                     <div class="col-sm-2">
                         <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-karyawan') }}">Tambah</a>
                     </div>
+                </div>
                 {{-- @endif --}}
             </div>
             <!-- /.card-header -->

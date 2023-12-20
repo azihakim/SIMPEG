@@ -98,6 +98,12 @@
                             </a>
                         </li> --}}
                         <li class="nav-item">
+                            <a href="{{ url('recruitment') }}" class="nav-link">
+                                <i class="nav-icon fas fa-user-plus"></i>
+                                <p>Recruitment</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ url('karyawan') }}" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>Karyawan</p>
@@ -107,12 +113,6 @@
                             <a href="{{ url('absensi') }}" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
                                 <p>Absensi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ url('phk') }}" class="nav-link">
-                                <i class="nav-icon fas fa-user-minus"></i>
-                                <p>PHK</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -139,64 +139,15 @@
                                 <p>Promosi</p>
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a href="{{ url('data-gaji') }}" class="nav-link">
-                                <i class="nav-icon fas fa-inbox"></i>
-                                <p>Data Gaji</p>
-                            </a>
-                        </li> --}}
                         <li class="nav-item">
-                            <a href="{{ url('recruitment') }}" class="nav-link">
-                                <i class="nav-icon fas fa-user-plus"></i>
-                                <p>Recruitment</p>
+                            <a href="{{ url('phk') }}" class="nav-link">
+                                <i class="nav-icon fas fa-user-minus"></i>
+                                <p>PHK</p>
                             </a>
                         </li>
-                        {{-- @if (auth()->user()->role == 'Kostumer')
-                        <li class="nav-item">
-                            <a href="{{ url('pesanan') }}" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
-                                <p>Pemesanan</p>
-                            </a>
-                        </li>
-                        @endif --}}
-                        {{-- @if (auth()->user()->jabatan == 'Admin')
-                            <li class="nav-item">
-                                <a href="{{ url('formBarang') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-th"></i>
-                                    <p>Form Barang</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('formKonsumen') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-th"></i>
-                                    <p>Form Konsumen</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('formSupir') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-th"></i>
-                                    <p>Form Supir</p>
-                                </a>
-                            </li>                            
-                        @endif
-
                         
-                        <li class="nav-item">
-                            <a href="{{ url('laporan') }}" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>Cetak Laporan</p>
-                            </a>
-                        </li>
-                        --}}
-                        {{-- @if (auth()->user()->role == 'Admin') --}}
-                        <li class="nav-item">
-                            <a href="{{ url('/addAdmin') }}" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>Tambah Admin</p>
-                            </a>
-                        </li>
                         {{-- @endif --}}
-                         
+                        
                         <li class="nav-item">
                             {{-- <form method="POST" action="{{ route('logout') }}">
                                 @csrf

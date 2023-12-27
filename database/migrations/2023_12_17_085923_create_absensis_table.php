@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id();
+            // $table->string('id_user');
+            $table->string('jenis');
+            $table->string('foto');
             $table->timestamps();
         });
     }

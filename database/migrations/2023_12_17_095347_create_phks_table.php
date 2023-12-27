@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('phks', function (Blueprint $table) {
             $table->id();
+            // $table->string('id_user');
+            $table->string('alasan');
+            $table->string('surat');
             $table->timestamps();
         });
     }

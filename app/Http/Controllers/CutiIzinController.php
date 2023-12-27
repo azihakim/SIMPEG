@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pengajuan;
+use App\Models\cutiIzin;
 use Illuminate\Http\Request;
 
-class PengajuanController extends Controller
+class CutiIzinController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('pengajuan.dashboard');
+        return view('cuti/izin.dashboard');
     }
 
     /**
@@ -34,7 +34,7 @@ class PengajuanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Pengajuan $pengajuan)
+    public function show(cutiIzin $cutiIzin)
     {
         //
     }
@@ -42,7 +42,7 @@ class PengajuanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pengajuan $pengajuan)
+    public function edit(cutiIzin $cutiIzin)
     {
         //
     }
@@ -50,7 +50,7 @@ class PengajuanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pengajuan $pengajuan)
+    public function update(Request $request, cutiIzin $cutiIzin)
     {
         //
     }
@@ -58,7 +58,7 @@ class PengajuanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pengajuan $pengajuan)
+    public function destroy(cutiIzin $cutiIzin)
     {
         //
     }

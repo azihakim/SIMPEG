@@ -62,10 +62,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Surat</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile">Upload Surat</label>
-                            </div>
+                            <input type="file" class="form-control-file" id="photoInput" name="photo" accept="image/*" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -79,4 +76,5 @@
             </form>
         </div>
     </div>
+
 @endsection

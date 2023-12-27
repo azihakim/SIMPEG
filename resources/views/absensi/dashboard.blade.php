@@ -10,7 +10,7 @@
                         <h2>Absensi</h2>
                     </div>
                     <div class="col-sm-2">
-                        <a type="button" class="btn btn-block btn-outline-primary" href="{{ url('tambah-absensi') }}">Tambah Data</a>
+                        <a class="btn btn-block btn-outline-primary" type="button" data-toggle="modal" data-target="#modal-default-1">Absensi</a>
                     </div>
                 </div>
             </div>
@@ -92,4 +92,5 @@
         </div>
     </div>
     </div>
+    @include('absensi.modal')
 @endsection

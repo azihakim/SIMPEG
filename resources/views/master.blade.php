@@ -205,7 +205,6 @@
 
     </div>
 
-
     <script src="{{ asset('vendors/plugins/jquery/jquery.min.js') }}"></script>
 
     <script src="{{ asset('vendors/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

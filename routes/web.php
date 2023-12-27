@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\CutiIzinController;
 use App\Http\Controllers\GajiController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\PengajuanController;
@@ -44,7 +45,7 @@ Route::get('/tambah-phk', function () {
     return view('phk.tambah');
 });
 
-Route::resource('pengajuan', PengajuanController::class);
+Route::resource('pengajuan', CutiIzinController::class);
 Route::get('/tambah-pengajuan', function () {
     return view('pengajuan.tambah');
 });

@@ -81,9 +81,23 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Divisi</label>
-                            <select id="pilihan_divisi" name="divisi" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="2" tabindex="-1" aria-hidden="true">
+                            <label>Jabatan</label>
+                            <select id="pilihan_divisi" name="jabatan" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="2" tabindex="-1" aria-hidden="true">
                                 <option></option>
+                                <option value="Dewan Direksi">Dewan Direksi</option>
+                                <option value="Kabag.AKU">Kabag.AKU</option>
+                                <option value="Kabag. Pengadaan">Kabag. Pengadaan</option>
+                                <option value="Kabag. SDM & Umum">Kabag. SDM & Umum</option>
+                                <option value="Kabag. SPI">Kabag. SPI</option>
+                                <option value="Kabag. Tanaman">Kabag. Tanaman</option>
+                                <option value="Kabag. Teknik">Kabag. Teknik</option>
+                                <option value="Kabag. Renbang">Kabag. Renbang</option>
+                                <option value="Adm. PIN">Adm. PIN</option>
+                                <option value="Adm. RL">Adm. RL</option>
+                                <option value="Adm. PPL">Adm. PPL</option>
+                                <option value="Adm. Muba">Adm. Muba</option>
+                                <option value="Adm. S.Aji">Adm. S.Aji</option>
+                                <option value="Adm. UPUL">Adm. UPUL</option>
                             </select>
                         </div>
                     </div>
@@ -97,12 +111,12 @@
                             </select>    
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    {{-- <div class="col-sm-6">
                         <div class="form-group">
                             <label>Jabatan</label>
                             <input type="text" class="form-control" name="jabatan" placeholder="Masukkan Jabatan">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <button type="submit" class="btn btn-lg btn-primary float-right">Simpan</button>
             </form>

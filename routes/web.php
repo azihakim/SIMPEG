@@ -65,10 +65,10 @@ Route::get('/tambah-promosi', function () {
     return view('promosi.tambah');
 });
 
-Route::resource('data-gaji', GajiController::class);
-Route::get('/edit-gaji', function () {
-    return view('dataGaji.tambah');
-});
+// Route::resource('data-gaji', GajiController::class);
+// Route::get('/edit-gaji', function () {
+//     return view('dataGaji.tambah');
+// });
 
 Route::resource('recruitment', RecruitmentController::class);
 Route::get('/regist-calonkaryawan', function () {

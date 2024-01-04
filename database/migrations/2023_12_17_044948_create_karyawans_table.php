@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('karyawans', function (Blueprint $table) {
             $table->id();
-            // $table->string('id_user');
+            $table->string('username');
+            $table->string('password');
             $table->string('status');
             $table->string('nama');
             $table->string('telepon');
@@ -21,10 +22,10 @@ return new class extends Migration
             $table->string('jenis_kelamin');
             $table->string('alamat');
             $table->string('nik');
-            $table->string('tanggal_masuk_kerja');
+            $table->string('tgl_masuk');
             $table->string('pendidikan_terakhir');
             $table->string('jabatan');
-            $table->string('divisi');
+            // $table->string('divisi');
             $table->timestamps();
         });
     }

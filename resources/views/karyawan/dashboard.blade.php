@@ -3,6 +3,11 @@
 @section('content')
     <div class="container-fluid">
         <div class="card">
+            @if(session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
             <div class="card-header">
                 {{-- @if (auth()->user()->jabatan == 'Admin') --}}
                 <div class="row">
@@ -32,28 +37,45 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle fas fa-edit" data-toggle="dropdown" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div class="dropdown-menu" role="menu" style="">
-                                    <a class="dropdown-item" href="#">Edit</a>
+                    @foreach ($karyawan as $item)
+                        <tr>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle fas fa-edit" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu" role="menu" style="">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <form action="{{ route('karyawan.update', $item->id) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            @if ($item->status == 'Non-Aktif')
+                                                <input type="hidden" name="status" value="Aktif">
+                                                <button class="dropdown-item" type="submit">Aktifkan</button>
+                                            @else
+                                                <input type="hidden" name="status" value="Non-Aktif">
+                                                <button class="dropdown-item" type="submit">Non-Aktifkan</button>
+                                            @endif
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <span class="badge bg-success">Aktif</span>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                            </td>
+                            <td>
+                                @if ($item->status == 'Non-Aktif')
+                                    <span class="badge bg-danger">Non-Aktif</span>
+                                @elseif($item->status == 'Aktif')
+                                    <span class="badge bg-success">Aktif</span>
+                                @endif
+                            </td>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ $item->username }}</td>
+                            <td>{{ $item->telepon }}</td>
+                            <td>{{ $item->jenis_kelamin }}</td>
+                            <td>{{ $item->agama }}</td>
+                            <td>{{ $item->alamat }}</td>
+                            <td>{{ $item->nik }}</td>
+                        </tr>
+                    @endforeach
                     
                 </tbody>
                 <tfoot>

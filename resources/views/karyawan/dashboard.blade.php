@@ -1,5 +1,6 @@
 @extends('master')
 @section('title', 'Dashboard Karyawan')
+@section('btn-table', 'print')
 @section('content')
     <div class="container-fluid">
         <div class="card">
@@ -45,8 +46,8 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                     </button>
                                     <div class="dropdown-menu" role="menu" style="">
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <form action="{{ route('karyawan.update', $item->id) }}" method="POST">
+                                        <a class="dropdown-item" href="{{ route('karyawan.edit', $item->id) }}">Edit</a>
+                                        <form action="{{ route('karyawan.status', $item->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
                                             @if ($item->status == 'Non-Aktif')

@@ -58,9 +58,10 @@ class KaryawanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Karyawan $karyawan)
+    public function edit($id)
     {
-        //
+        $karyawan = Karyawan::find($id);
+        return view('karyawan.edit', compact('karyawan'));
     }
 
     public function status($id, Request $request)
@@ -76,8 +77,20 @@ class KaryawanController extends Controller
      */
     public function update($id, Request $request)
     {
-        $karyawan = Karyawan::find($id);
+        $karyawan = new Karyawan;
+        $karyawan->nama = $request->nama;
+        $karyawan->alamat = $request->alamat;
+        $karyawan->username = $request->username;
+        $karyawan->nik = $request->nik;
+        $karyawan->password = $request->password;
+        $karyawan->tgl_masuk = $request->tgl_masuk;
+        $karyawan->telepon = $request->telepon;
+        $karyawan->pendidikan_terakhir = $request->pendidikan_terakhir;
+        $karyawan->agama = $request->agama;
+        $karyawan->jabatan = $request->jabatan;
+        $karyawan->jenis_kelamin = $request->jenis_kelamin;
         $karyawan->status = $request->status;
+
         $karyawan->save();
         return redirect('/karyawan')->with('status', 'Berhasil diubah!');
     }

@@ -38,6 +38,8 @@ Route::resource('karyawan', KaryawanController::class);
 Route::get('/tambah-karyawan', function () {
     return view('karyawan.tambah');
 });
+Route::put('/karyawan/{id}/status', [KaryawanController::class, 'status'])->name('karyawan.status');
+
 Route::resource('absensi', AbsensiController::class);
 
 Route::resource('phk', PhkController::class);

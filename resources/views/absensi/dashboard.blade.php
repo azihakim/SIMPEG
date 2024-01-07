@@ -65,25 +65,26 @@
                         <th>NAMA</th>
                         <th>ABSEN</th>
                         <th>TANGGAL</th>
-                        <th>LOKASI</th>
                         <th>FOTO</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    @foreach ($absensi as $item)
+                        <tr>
+                            <td></td>
+                            <td>{{ $item->jenis }}</td>
+                            <td>{{ $item->created_at }}</td>
+                            <td>
+                                <img src="{{ asset('storage/dokument/' . $item->foto) }}" alt="Deskripsi Gambar" style="max-width: 150px; max-height: 360px;">
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
                         <th>NAMA</th>
                         <th>ABSEN</th>
                         <th>TANGGAL</th>
-                        <th>LOKASI</th>
                         <th>FOTO</th>
                     </tr>
                 </tfoot>

@@ -12,7 +12,8 @@ class AbsensiController extends Controller
      */
     public function index()
     {
-        return view('absensi.dashboard');
+        $absensi = Absensi::all();
+        return view('absensi.dashboard', compact('absensi'));
     }
 
     /**
@@ -28,7 +29,19 @@ class AbsensiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $ext = $request->foto->getClientOriginalExtension();
+        $file = "foto-".time().".".$ext;
+        $request->foto->storeAs('public/dokument', $file);
+        $absen = new Absensi();
+        $absen->jenis = $data['jenis'];
+        $absen->foto = $file;
+        $absen->save();
+
+        return redirect()->back();
+
+
     }
 
     /**

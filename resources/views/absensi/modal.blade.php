@@ -8,17 +8,32 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
-            <div class="modal-body">
-              <div class="form-group">
-                  <label>Upload bukti foto</label>
-                  <br>
-                  <input type="file" class="form-control-file" id="photoInput" name="photo" accept="image/*" required>
+            <form action="{{ route("absensi.store") }}" method="post" enctype="multipart/form-data">
+              @csrf
+              <div class="modal-body">
+                <div class="form-group">
+                    <label>Upload bukti foto</label>
+                    <br>
+                    <input type="file" class="form-control-file" id="photoInput" name="foto" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                  <label>Keterangan absen</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis" value="Masuk">
+                    <label class="form-check-label">Masuk</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis" value="Pulang">
+                    <label class="form-check-label">Pulang</label>
+                  </div>
+                </div>
               </div>
-            </div>
+            
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
-              <button type="button" class="btn btn-primary">Simpan</button>
+              <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
+          </form>
           </div>
     </div>
 </div>

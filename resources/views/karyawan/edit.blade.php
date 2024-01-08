@@ -41,13 +41,15 @@
                             <label>NIK</label>
                             <input value="{{ $karyawan->nik }}" type="text" class="form-control" name="nik" placeholder="Masukkan NIK">
                         </div>
+                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Password</label>
-                            <input value="{{ $karyawan->password }}" type="password" class="form-control" name="password" placeholder="Masukkan password">
+                            <input type="password" class="form-control" name="password" placeholder="Masukkan password">
+                            <p class="text-danger">kosongkan jika tidak mengubah password!</p>
                         </div>
                     </div>
                     <div class="col-sm-6">

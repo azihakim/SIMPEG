@@ -41,6 +41,7 @@ Route::get('/tambah-karyawan', function () {
 Route::put('/karyawan/{id}/status', [KaryawanController::class, 'status'])->name('karyawan.status');
 
 Route::resource('absensi', AbsensiController::class);
+Route::get('absensi-filter', [AbsensiController::class, 'filter'])->name('absensi.filter');
 
 Route::resource('phk', PhkController::class);
 Route::get('/tambah-phk', function () {

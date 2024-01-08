@@ -75,4 +75,18 @@ class AbsensiController extends Controller
     {
         //
     }
+
+    public function filter(Request $request)
+    {
+        $bulan = $request->input('bulan');
+        $tahun = $request->input('tahun');
+
+        // Validasi input jika diperlukan
+
+        $absensi = Absensi::whereMonth('created_at', $bulan)
+                        ->whereYear('created_at', $tahun)
+                        ->get();
+                        
+        return view('absensi.dashboard', compact('absensi'));
+    }
 }

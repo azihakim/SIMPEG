@@ -77,12 +77,14 @@ class KaryawanController extends Controller
      */
     public function update($id, Request $request)
     {
-        $karyawan = new Karyawan;
+        $karyawan = Karyawan::find($id);
         $karyawan->nama = $request->nama;
         $karyawan->alamat = $request->alamat;
         $karyawan->username = $request->username;
         $karyawan->nik = $request->nik;
-        $karyawan->password = $request->password;
+        if ($request->password != null) {
+            $karyawan->password = $request->password;
+        }
         $karyawan->tgl_masuk = $request->tgl_masuk;
         $karyawan->telepon = $request->telepon;
         $karyawan->pendidikan_terakhir = $request->pendidikan_terakhir;
